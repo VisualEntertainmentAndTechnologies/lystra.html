@@ -515,11 +515,12 @@
       div.card {
         width:100%;
         font-family: sans-serif;
-        margin-top: 5px;
+        margin-top: 50px;
+
       }
       div.card_header {
         text-align: center;
-        padding: 12px;
+        padding: 5px;
       }
       div.card_body {
         text-align: center;
@@ -533,13 +534,19 @@
       }
       .card_header_button {
         font-size: small;
-        margin: 5px;
+        margin: 0px;
         padding: 5px;
         border-radius: 5px 5px 5px 5px;
         border-width: 1px;
         border-color: black;
         border-style: solid;
         background-color: khaki;
+	min-width: 75%;
+	width: 98%;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top:0;
       }
       .button {
         font-size: small;
@@ -594,7 +601,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body onload="lystra_load()">
-    <div class="card" tabindex="0">
         <div class="card_header">
           <div id="playercontrols" class="card_header_button">
             <audio id="audio" onended="lystra_play_next()"></audio>
@@ -606,10 +612,9 @@
             </div>
           <div id="nowplaying"></div>
         </div>
-      </div>
+       </div>
 
-      
-
+<div class="card" tabindex="0">
       <div id="queue_tab" class="folder_wrapper">
        
         <div class="playlist card_body">

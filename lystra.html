@@ -287,7 +287,7 @@
           });
 
           lystra_make('button', {
-            text: 'Unqueue',
+            text: '&#x232B;',
             style: 'float:right',
             onclick: function(){
               lystra_queue(uri);
@@ -296,7 +296,7 @@
           });
 
           lystra_make('button', {
-            text: 'Play Next',
+            text: '&#x23EB',
             style: 'float:right',
             onclick: function(){
               var qelm = track.queueElement;
@@ -420,7 +420,7 @@
         });
 
         lystra_make('button', {
-          text: 'Enqueue',
+          text: '+',
           style: 'float:right',
           onclick: function(){
             if(link.isPlaylist){
@@ -434,7 +434,7 @@
 
         if(link.isPlaylist){
           lystra_make('button', {
-            text: 'Expand',
+            text: '&#x2012;',
             class: 'expand_button',
             style: 'float:right',
             'data-uri': trackUri,
@@ -445,7 +445,7 @@
             parent:  playlistElement
           });
           lystra_make('button', {
-            text : 'Collapse',
+            text : '&#2012;',
             onclick : function(){
               lystra_collapse(this);
             },
@@ -600,8 +600,8 @@
             <audio id="audio" onended="lystra_play_next()"></audio>
             <div>
               <span id="countup"></span>
-              <button onclick="lystra_toggle_play_pause()">Play/Pause</button>
-              <button onclick="lystra_pause(); lystra_play_next()">Skip</button>
+              <button onclick="lystra_toggle_play_pause()">&#x23EF;</button>
+              <button onclick="lystra_pause(); lystra_play_next()">&#x23ED;</button>
               <span id="countdown"></span>
             </div>
           <div id="nowplaying"></div>
@@ -614,20 +614,20 @@
        
         <div class="playlist card_body">
             <span>Play Queue</span>
-        <button onclick="lystra_clear()" style="float:right">Clear Queue</button>
-        <button onclick="lystra_shuffle()" style="float:right">Shuffle</button>
+        <button onclick="lystra_clear()" style="float:right">&#x2716;</button>
+        <button onclick="lystra_shuffle()" style="float:right">&#x1F500;</button>
         <button
              class="expand_button"
              style="display:none; float:right"
              onclick=
              "lystra_switch('#queue_tab .collapse_button, #queue_body', '#queue_tab .expand_button')">
-             Expand</button>
+             &#x2012;</button>
         <button
              class="collapse_button"
              style="float:right"
              onclick=
              "lystra_switch('#queue_tab .expand_button', '#queue_tab .collapse_button, #queue_body')">
-             Collapse</button>
+             &#2012;</button>
              <div style="clear:both"></div>
         </div>
         <div id="queue_body" data-fetched="true" 
@@ -644,13 +644,13 @@
              style="float:right"
              class="expand_button"
              onclick="lystra_switch('#library_collapse_button, #library_body', '#library_expand_button')">
-             Expand</button>
+             &#x2012;</button>
         <button data-fetched="true"
               id="library_collapse_button"
              style="display:none; float:right"
              class="collapse_button"
              onclick="lystra_switch('#library_expand_button', '#library_collapse_button, #library_body')">
-             Collapse</button>
+             &#2012;</button>
              <div style="clear:both"></div>
            </div>
         <div id="library_body" class="card_body folder_content">
@@ -663,11 +663,11 @@
         <button
           class="expand_button"
           style="display:none; float:right"
-          onclick="lystra_switch('#history_wrapper .collapse_button, #history_body', '#history_wrapper .expand_button')">Expand</button>
+          onclick="lystra_switch('#history_wrapper .collapse_button, #history_body', '#history_wrapper .expand_button')">&#x2012;</button>
         <button id="history_button"
           class="collapse_button"
           style="float:right"
-          onclick="lystra_switch('#history_wrapper .expand_button', '#history_wrapper .collapse_button, #history_body')">Collapse</button>
+          onclick="lystra_switch('#history_wrapper .expand_button', '#history_wrapper .collapse_button, #history_body')">&#2012;</button>
           <div style="clear:both"></div>
         </div>
           <div id="history_body" data-fetched="true" class="card_body folder_content"></div>
